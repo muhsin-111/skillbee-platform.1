@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SkillBee | Learn Innovate Achieve</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-left">
+            <div class="menu-dots" onclick="toggleMenu()">&#8942;</div>
+            <img src="logo.png" alt="SkillBee Logo" class="site-logo">
+        </div>
+        <ul id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#highlights">Highlights</a></li>
+            <li><a href="#verify" class="nav-btn">Access Class</a></li>
+        </ul>
+        
+        <div id="adminMenu" class="dropdown-content">
+            <a href="javascript:void(0)" onclick="openAdmin('staff')">Staff Access</a>
+            <a href="javascript:void(0)" onclick="openAdmin('admin')">Admin Access</a>
+        </div>
+    </nav>
+
+    <div id="adminModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAdmin()">&times;</span>
+            <div id="loginArea">
+                <h3>Admin Login</h3>
+                <input type="password" id="adminPass" placeholder="Enter Admin Password">
+                <button onclick="checkAdmin()">Login</button>
+            </div>
+            <div id="dashboardArea" style="display:none;">
+                <h3>SkillBee Management</h3>
+                <label>Add Access Code:</label>
+                <input type="text" id="newCode" placeholder="Enter Student Code">
+                <label>Select Course:</label>
+                <select id="courseSelect">
+                    <option value="resin">Resin Art</option>
+                    <option value="ai">AI For Teachers</option>
+                </select>
+                <label>Update Video Link:</label>
+                <input type="text" id="videoLink" placeholder="Paste YouTube Embed URL">
+                <button onclick="saveData()">Update Website</button>
+            </div>
+        </div>
+    </div>
+
+    <header id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Future Skills <br>Start Here</h1>
+            <p>Empowering students with expert mentors and structured paths.</p>
+            <button class="explore-btn" onclick="document.getElementById('courses').scrollIntoView()">Explore Courses</button>
+        </div>
+    </header>
+
+    <section id="courses" class="container">
+        <h2 class="section-title">Available Courses</h2>
+        <div class="course-grid">
+            <div class="course-box">
+                <div class="course-img-box"><img src="c1.png" alt="Resin Art"></div>
+                <h3>Resin Art</h3>
+                <div class="price-row">
+                    <span class="actual-fee">₹1999</span>
+                    <span class="offer-fee">₹1499</span>
+                </div>
+                <button onclick="buyCourse('Resin Art')">Enroll Now</button>
+            </div>
+            <div class="course-box">
+                <div class="course-img-box"><img src="c2.png" alt="AI"></div>
+                <h3>AI For Teachers</h3>
+                <div class="price-row">
+                    <span class="actual-fee">₹1499</span>
+                    <span class="offer-fee">₹1299</span>
+                </div>
+                <button onclick="buyCourse('AI For Teachers')">Enroll Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="highlights">
+        <div class="slider-wrapper">
+            <div class="slider-track">
+                <div class="slide"><img src="h1.png" alt="H1"></div>
+                <div class="slide"><img src="h2.png" alt="H2"></div>
+                <div class="slide"><img src="h3.png" alt="H3"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
