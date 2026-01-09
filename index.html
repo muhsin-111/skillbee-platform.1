@@ -17,9 +17,8 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#courses">Courses</a></li>
             <li><a href="#highlights">Highlights</a></li>
-            <li><a href="#verify" class="nav-btn">Access Class</a></li>
+            <li><a href="#workers">Instructors</a></li>
         </ul>
-        
         <div id="adminMenu" class="dropdown-content">
             <a href="javascript:void(0)" onclick="openAdmin('staff')">Staff Access</a>
             <a href="javascript:void(0)" onclick="openAdmin('admin')">Admin Access</a>
@@ -31,21 +30,14 @@
             <span class="close" onclick="closeAdmin()">&times;</span>
             <div id="loginArea">
                 <h3>Admin Login</h3>
-                <input type="password" id="adminPass" placeholder="Enter Admin Password">
+                <input type="password" id="adminPass" placeholder="Password">
                 <button onclick="checkAdmin()">Login</button>
             </div>
             <div id="dashboardArea" style="display:none;">
-                <h3>SkillBee Management</h3>
-                <label>Add Access Code:</label>
-                <input type="text" id="newCode" placeholder="Enter Student Code">
-                <label>Select Course:</label>
-                <select id="courseSelect">
-                    <option value="resin">Resin Art</option>
-                    <option value="ai">AI For Teachers</option>
-                </select>
-                <label>Update Video Link:</label>
-                <input type="text" id="videoLink" placeholder="Paste YouTube Embed URL">
-                <button onclick="saveData()">Update Website</button>
+                <h3>Admin Dashboard</h3>
+                <input type="text" id="newCode" placeholder="Add Student Code">
+                <input type="text" id="videoLink" placeholder="YouTube Link">
+                <button onclick="saveData()">Update Site</button>
             </div>
         </div>
     </div>
@@ -53,7 +45,7 @@
     <header id="home" class="hero-section">
         <div class="hero-content">
             <h1>Future Skills <br>Start Here</h1>
-            <p>Empowering students with expert mentors and structured paths.</p>
+            <p>SkillBee ensures every student becomes future-ready.</p>
             <button class="explore-btn" onclick="document.getElementById('courses').scrollIntoView()">Explore Courses</button>
         </div>
     </header>
@@ -70,25 +62,27 @@
                 </div>
                 <button onclick="buyCourse('Resin Art')">Enroll Now</button>
             </div>
-            <div class="course-box">
-                <div class="course-img-box"><img src="c2.png" alt="AI"></div>
-                <h3>AI For Teachers</h3>
-                <div class="price-row">
-                    <span class="actual-fee">₹1499</span>
-                    <span class="offer-fee">₹1299</span>
-                </div>
-                <button onclick="buyCourse('AI For Teachers')">Enroll Now</button>
             </div>
-        </div>
     </section>
 
     <section id="highlights">
+        <h2 class="section-title">SkillBee Highlights</h2>
         <div class="slider-wrapper">
             <div class="slider-track">
                 <div class="slide"><img src="h1.png" alt="H1"></div>
                 <div class="slide"><img src="h2.png" alt="H2"></div>
                 <div class="slide"><img src="h3.png" alt="H3"></div>
+                <div class="slide"><img src="h4.png" alt="H4"></div>
             </div>
+        </div>
+    </section>
+
+    <section id="workers" class="container">
+        <h2 class="section-title">Meet Our Instructors</h2>
+        <div class="worker-grid">
+            <div class="worker-card"><img src="staff1.png" alt="Muhsin" class="worker-img"><h3>Muhammed Muhsin PT</h3><p>CEO</p></div>
+            <div class="worker-card"><img src="staff2.png" alt="Rahla" class="worker-img"><h3>Rahla Shahid</h3><p>Telecaller Executive</p></div>
+            <div class="worker-card"><img src="staff3.png" alt="Fasna" class="worker-img"><h3>Fasna Fabee K</h3><p>Digital Marketing</p></div>
         </div>
     </section>
 
